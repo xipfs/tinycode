@@ -3,8 +3,8 @@
  Name        : BrainFuck.c
  Author      : xiehui
  Version     : 1.0
- Email       : xiehui6@lenovo.com
- Copyright   : Copyright © 2018 Lenovo Services. All rights reserved.
+ Email       : flexie@foxmail.com
+ Copyright   : Copyright © 2018 XIPFS Services. All rights reserved.
  Description : BrainFuck 语法规则:
 			   > 	下一单元作为当前的数据单元
 			   <	上一单元作为当前的数据单元
