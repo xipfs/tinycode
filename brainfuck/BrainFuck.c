@@ -1,7 +1,7 @@
 /*
  ============================================================================
  Name        : BrainFuck.c
- Author      : xiehui
+ Author      : 0xC000005
  Version     : 1.0
  Email       : flexie@foxmail.com
  Copyright   : Copyright © 2018 XIPFS Services. All rights reserved.

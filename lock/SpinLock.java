@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicReference;
 /*
  ============================================================================
  Name       		: SpinLock.java
- Author      		: xiehui
+ Author      		: 0xC000005
  Date               : 2018年10月12日
  Version     	 	: 1.0
  Copyright   	: The MIT License (MIT)

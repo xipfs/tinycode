@@ -1,8 +1,8 @@
 package org.xipfs.lock;
 /*
  ============================================================================
- Name       		: CLHLockV2.java
- Author      		: xiehui
+ Name       		: CLHLock.java
+ Author      		: 0xC000005
  Date               : 2018年10月12日
  Version     	 	: 1.0
  Copyright   	: The MIT License (MIT)
