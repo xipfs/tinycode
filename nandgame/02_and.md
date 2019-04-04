@@ -11,3 +11,5 @@ An and gate output is 1 when both inputs are 1:
 
 
 ## Answer
+
+![](02_and.png)
