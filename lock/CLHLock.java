@@ -1,35 +1,23 @@
-package org.xipfs.lock;
-/*
- ============================================================================
- Name       		: CLHLock.java
- Author      		: 0xC000005
- Date               : 2018年10月12日
- Version     	 	: 1.0
- Copyright   	: The MIT License (MIT)
- Description 	: CLH锁
- ============================================================================
- */
-
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 
 public class CLHLock {
 	//CLH锁节点状态 - 每个希望获取锁的线程都被封装为一个节点对象
 	private static class CLHNode {
 	//默认状态为true - 即处于等待状态或者加锁成功(换言之，即此节点处于有效的一种状态)
-    volatile boolean active = true;
-}
+    	volatile boolean active = true;
+	}
 
 	//隐式链表最末等待节点
-    @SuppressWarnings("unused")
+    	@SuppressWarnings("unused")
 	private volatile CLHNode tail = null;
-    //线程对应CLH节点映射
-    private ThreadLocal<CLHNode> currentThreadNode = new ThreadLocal<>();
-    //原子更新器
-    @SuppressWarnings("rawtypes")
-	private static final AtomicReferenceFieldUpdater UPDATER = AtomicReferenceFieldUpdater.newUpdater(CLHLock.class,CLHNode.class,"tail");
+    	//线程对应CLH节点映射
+    	private ThreadLocal<CLHNode> currentThreadNode = new ThreadLocal<>();
+    	//原子更新器
+    	@SuppressWarnings("rawtypes")
+	private static final AtomicReferenceFieldUpdater UPDATER = 					AtomicReferenceFieldUpdater.newUpdater(CLHLock.class,CLHNode.class,"tail");
 
-    //CLH加锁
-    @SuppressWarnings("unchecked")
+    	//CLH加锁
+    	@SuppressWarnings("unchecked")
 	public void lock() {
         CLHNode cNode = currentThreadNode.get();
         if (cNode == null) {
@@ -45,9 +33,9 @@ public class CLHLock {
         }
         // 没有前驱节点表示可以直接获取到锁，由于默认获取锁状态为true，此时可以什么操作都不执行
         // 能够执行到这里表示已经成功获取到了锁
-    }
-    //CLH释放锁
-    @SuppressWarnings("unchecked")
+    	}
+    	//CLH释放锁
+    	@SuppressWarnings("unchecked")
 	public void unlock() {
         CLHNode cNode = currentThreadNode.get();
         // 只有持有锁的线程才能够释放

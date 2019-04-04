@@ -1,17 +1,8 @@
-package org.xipfs.lock;
-
 import java.util.concurrent.atomic.AtomicReference;
 
-/*
- ============================================================================
- Name       		: SpinLock.java
- Author      		: 0xC000005
- Date               : 2018年10月12日
- Version     	 	: 1.0
- Copyright   	: The MIT License (MIT)
- Description 	: 普通SpinLock (支持可重入）
- ============================================================================
- */
+/**
+普通SpinLock (支持可重入）
+*/
 
 public class SpinLock {
 	// use thread itself as synchronization state

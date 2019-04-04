@@ -1,15 +1,6 @@
-package org.xipfs.lock;
-/*
- ============================================================================
- Name       		: SimpleSpinLock.java
- Author      		: 0xC000005
- Date               : 2018年10月12日
- Version     	 	: 1.0
- Copyright   	: The MIT License (MIT)
- Description 	: 非公平自旋锁
- ============================================================================
- */
-
+/**
+非公平自旋锁
+*/
 import java.util.concurrent.atomic.AtomicReference;
 
 public class SimpleSpinLock {

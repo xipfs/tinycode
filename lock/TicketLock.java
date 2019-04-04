@@ -1,14 +1,6 @@
-package org.xipfs.lock;
-/*
- ============================================================================
- Name       		: TicketLock.java
- Author      		: 0xC000005
- Date               : 2018年10月12日
- Version     	 	: 1.0
- Copyright   	: The MIT License (MIT)
- Description 	: 基于排队的公平自旋锁
- ============================================================================
- */
+/**
+基于排队的公平自旋锁
+*/
 
 import java.util.concurrent.atomic.AtomicInteger;
 
